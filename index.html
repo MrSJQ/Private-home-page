@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>KingKang is website</title>
+		<link href="css/index.css" rel="stylesheet" type="text/css"> 
+		<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script> 
+		<script src="js/jquery.event.drag-1.5.min.js" type="text/javascript"></script> 
+		<script src="js/jquery.touchSlider.js" type="text/javascript"></script> 
+		<style>
+		.image-div .Carousel_figur{
+			height: 20rem;
+			width: 672px;
+			overflow: hidden;
+			position: relative;
+		}
+		.image-div .Carousel_figur .main_image ul{
+			height: 20rem;
+			width: 100%;
+			position: absolute;
+			overflow: hidden;
+		}
+		.image-div .Carousel_figur .main_image ul li{
+			float: left;
+			width: 100%;
+			height: 20rem;
+			display: block;
+			left: 0;
+		}
+		.image-div .Carousel_figur .main_image ul li>img{
+			height: 20rem;
+			width: 100%;
+			display: block;
+		}
+		/*悬浮按钮组件*/
+		.image-div .Carousel_figur .flicking_con{
+			position: absolute;
+		    top: 16.8rem;
+		    z-index: 999;
+		    width: 472px;
+		    height: 3rem;
+		    /*border: 1px solid red;*/
+		    padding-left: 200px;
+		    cursor: pointer;
+		}
+		.image-div .Carousel_figur .flicking_con a{
+		    float: left;
+		    width: 2rem;
+		    height: 2rem;
+		    border-radius: 5vw;
+		    border: 1px solid black;
+		    margin-top: 0.5rem;
+		    margin-left: 0.5rem;
+		    margin-right: 0.5rem;
+		}
+		.image-div .Carousel_figur .flicking_con a.on{
+			border: 1px solid black;
+			background-color: white;
+		}
+		/*左右组件*/
+		.main_image a{
+			z-index: 99999;
+			top: 9.5rem;
+			position: absolute;
+			background: red;
+			display: block;
+			height: 10vw !important;
+			width: 10vw !important;
+			/*display: none;*/
+		}
+		.main_image a>img{
+			height: 1rem;
+			display: block;
+		}
+		/*.main_image  #btn_prev{
+			margin-left: 8vw;
+			left: 10vw;
+		}
+		.main_image  #btn_next{
+			margin-right: 8vw;
+			right: 10vw;
+		}*/
+		.main_image #btn_prev{
+			background:url(../image/hover_left.png) no-repeat left top;
+			background-size:6vw 6vw ;
+			left:5vw;
+			
+		}
+		.main_image #btn_next{
+			background:url(../image/hover_right.png) no-repeat right top;
+			background-size:6vw 6vw ;
+			right:5vw;
+		}
+		</style>
+	</head>
+	<body>
+		<header id="wrapper">
+			<div class="navigation-top" id="navigation-top">
+				<h1 id="logo"><a href = "index.html">KingKang</a></h1>
+				<ul>
+					<li>首页</li>
+					<li>一路的风景</li>
+					<li>海盗和navy</li>
+					<li>关于</li>
+					<li>后记</li>
+				</ul>
+			</div>
+		</header>
+		<div class="container" id="container">
+			<div class="box-first">
+				<div class="image-div">
+					<!--<ul>
+						<li><img src="images/aisi.jpg" alt=""></li>
+						<li><img src="images/all.jpg" alt="" ></li>
+					</ul>-->
+					<div class="Carousel_figur" id="Carousel_figur">
+		                <div class="flicking_con">
+		                	<a href="#"></a>
+		                	<a href="#"></a>
+		                	<a href="#"></a>
+		                	<a href="#"></a>
+		                </div>
+		                <div class="main_image">
+			                <ul class="Carousel-image">
+			                	<li class="image-first active">
+			                		<img src="images/all.jpg" alt=""> 
+			                	</li>
+			                	<li class="image-second">
+			                		<img src="images/aisi.jpg" alt=""> 
+			                	</li>
+			                	<li class="image-third">
+			                		<img src="images/namei.jpg" a.3lt=""> 
+			                	</li>
+			                	<li class="image-fouth">
+			                		<img src="images/suolong.jpg" alt=""> 
+			                	</li>
+			                </ul>
+		                	<a href="javascript:;" id="btn_prev">
+		                	</a>
+							<a href="javascript:;" id="btn_next">
+							</a>
+		                </div>
+					</div>
+				</div>
+				<div class="world-div">
+					<h2>小幸运</h2>
+					<hr / style="border-top: 0.5px solid black;width: 60%;margin-left: 20%;margin-bottom: 1rem;">
+					<p>
+						我听见雨滴落在青青草地<br />
+						我听见远方下课钟声响起<br />
+						可是我没有听见你的声音<br />
+						认真 呼唤我姓名<br />
+						爱上你的时候还不懂感情<br />
+						离别了才觉得刻骨 铭心<br />
+						为什么没有发现遇见了你<br />
+						是生命最好的事情<br />
+						也许当时忙着微笑和哭泣<br />
+						忙着追逐天空中的流星<br />
+						人理所当然的忘记<br />
+						是谁风里雨里一直默默守护在原地<br />
+					</p>
+				</div>
+			</div>
+		</div>
+			
+		<script>
+			$(document).ready(function(){
+				//触动屏幕显示左右组件----PC端
+				$(".Carousel_figur").hover(function(){
+					$("#btn_prev,#btn_next").fadeIn()
+				},function(){
+					$("#btn_prev,#btn_next").fadeOut()
+				});
+				
+				$dragBln = false;
+				
+				$(".main_image").touchSlider({
+					flexible : true,
+					//控制从前一副图滑动到后一副图的滑动时间
+					speed : 500,
+					btn_prev : $("#btn_prev"),
+					btn_next : $("#btn_next"),
+					paging : $(".flicking_con a"),
+					counter : function(e){
+						$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+					}
+				});
+				
+				$(".main_image").bind("mousedown",function(){
+					$dragBln = false;
+				});
+				$(".main_image").bind("dragstart",function(){
+					$dragBln = true;
+				});
+				$(".main_image a").click(function(){
+					if($dragBln){
+						return false;
+					}
+				});
+				//控制自动轮播切换图片的时间
+				timer = setInterval(function(){
+					$("#btn_next").click();
+				},5000);
+				
+				$(".Carousel_figur").hover(function(){
+					clearInterval(timer)
+				},function(){
+					timer = setInterval(function(){
+						$("#btn_next").click();
+					},5000)
+				});
+				
+				$(".main_image").bind("touchstart",function(){
+					clearInterval(timer);
+				}).bind("touchend",function(){
+					timer = setInterval(function(){
+						$("#btn_next").click();
+					},5000)
+				});
+			});
+		</script>
+	</body>
+</html>
