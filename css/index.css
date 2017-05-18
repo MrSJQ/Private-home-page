@@ -17,6 +17,17 @@ body{
 	}
 }
 @media only screen and (min-width: 960px) and (max-width: 2000px) {
+	header{
+		width: 100%;
+		height: 8rem;
+		background-color: #1e1d1d;
+		overflow: hidden;
+		color: #626262;
+	}
+	header div h1 a{
+		color: #F5F5F5;
+		text-decoration: none;
+	}
 	header div{
 		width: 960px;
 		margin: 0 auto;
@@ -48,7 +59,7 @@ body{
 		color: #FFFFFF;
 		cursor: pointer;
 	}
-	.container .box-first{
+	.container .box-first, .container .box-second{
 		width: 960px;
 		height: 20rem;
 		/*overflow: hidden;*/
@@ -88,23 +99,105 @@ body{
 	.container .box-first .world-div p{
 		line-height: 1.3rem;
 	}
+	.container .box-first .image-div .Carousel_figur{
+		height: 20rem;
+		width: 672px;
+		overflow: hidden;
+		position: relative;
+	}
+	.container .box-first .image-div .Carousel_figur .main_image ul{
+		height: 20rem;
+		width: 100%;
+		position: absolute;
+		overflow: hidden;
+	}
+	.container .box-first .image-div .Carousel_figur .main_image ul li{
+		float: left;
+		width: 100%;
+		height: 20rem;
+		display: block;
+		left: 0;
+	}
+	.container .box-first .image-div .Carousel_figur .main_image ul li>img{
+		height: 20rem;
+		width: 100%;
+		display: block;
+	}
+	/*悬浮按钮组件*/
+	.container .box-first .image-div .Carousel_figur .flicking_con{
+		position: absolute;
+	    top: 16.8rem;
+	    z-index: 999;
+	    width: 472px;
+	    height: 3rem;
+	    /*border: 1px solid red;*/
+	    padding-left: 200px;
+	    cursor: pointer;
+	}
+	.container .box-first .image-div .Carousel_figur .flicking_con a{
+	    float: left;
+	    width: 2rem;
+	    height: 2rem;
+	    border-radius: 5vw;
+	    border: 1px solid black;
+	    margin-top: 0.5rem;
+	    margin-left: 0.5rem;
+	    margin-right: 0.5rem;
+	}
+	.container .box-first .image-div .Carousel_figur .flicking_con a.on{
+		border: 1px solid black;
+		background-color: white;
+	}
+	.container .box-second{
+		background: #0B0B0B;
+	}
+	.container .box-second div{
+		margin-top: -2rem;
+		width: 30%;
+		height: 100%;
+		float: left;
+		/*background: #F5F5F5;*/
+	}
+	.container .box-second .box-second-two{
+		background: #F5F5F5;
+	}
+	.container .box-second div p{
+		background: #F5F5F5;
+	}
+	.container .box-second .box-second-one img, .container .box-second .box-second-three img{
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	/*.container .box-second .box-second-one img:hover{
+		cursor: pointer;display: none;
+	}*/
+	
+	.container .box-second div .TipOfSecondImg{
+		/*background: #F5F5F5;*/
+		width: 10rem;
+		height: 3rem;
+		margin-top: -18rem;
+		margin-left: 1rem;
+		z-index: 9999;
+		display: block;
+		position: relative;
+	}
+	.container .box-second div .TipOfSecondImg p{
+		height: 1.5rem;
+		line-height: 1.5rem;
+		text-align: center;
+		display: none;
+		background: #F5F5F5;
+	}
+	.container .box-second .box-second-two{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.container .box-second .box-second-two img{
+		width: 100%;
+		height: 40%;
+	}
 }
 
-header{
-	width: 100%;
-	height: 8rem;
-	background-color: #1e1d1d;
-	overflow: hidden;
-	color: #626262;
-}
-header div h1 a{
-	color: #F5F5F5;
-	text-decoration: none;
-}
-header div{
-	width: 960px;
-	margin: 0 auto;
-	display: block;
-	height: 8rem;
-}
 
