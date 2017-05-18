@@ -7,33 +7,33 @@
 		<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script> 
 		<script src="js/jquery.event.drag-1.5.min.js" type="text/javascript"></script> 
 		<script src="js/jquery.touchSlider.js" type="text/javascript"></script> 
-		<style>
-		.image-div .Carousel_figur{
+		<!--<style>
+		.container .box-first .image-div .Carousel_figur{
 			height: 20rem;
 			width: 672px;
 			overflow: hidden;
 			position: relative;
 		}
-		.image-div .Carousel_figur .main_image ul{
+		.container .box-first .image-div .Carousel_figur .main_image ul{
 			height: 20rem;
 			width: 100%;
 			position: absolute;
 			overflow: hidden;
 		}
-		.image-div .Carousel_figur .main_image ul li{
+		.container .box-first .image-div .Carousel_figur .main_image ul li{
 			float: left;
 			width: 100%;
 			height: 20rem;
 			display: block;
 			left: 0;
 		}
-		.image-div .Carousel_figur .main_image ul li>img{
+		.container .box-first .image-div .Carousel_figur .main_image ul li>img{
 			height: 20rem;
 			width: 100%;
 			display: block;
 		}
 		/*悬浮按钮组件*/
-		.image-div .Carousel_figur .flicking_con{
+		.container .box-first .image-div .Carousel_figur .flicking_con{
 			position: absolute;
 		    top: 16.8rem;
 		    z-index: 999;
@@ -43,7 +43,7 @@
 		    padding-left: 200px;
 		    cursor: pointer;
 		}
-		.image-div .Carousel_figur .flicking_con a{
+		.container .box-first .image-div .Carousel_figur .flicking_con a{
 		    float: left;
 		    width: 2rem;
 		    height: 2rem;
@@ -53,45 +53,11 @@
 		    margin-left: 0.5rem;
 		    margin-right: 0.5rem;
 		}
-		.image-div .Carousel_figur .flicking_con a.on{
+		.container .box-first .image-div .Carousel_figur .flicking_con a.on{
 			border: 1px solid black;
 			background-color: white;
 		}
-		/*左右组件*/
-		.main_image a{
-			z-index: 99999;
-			top: 9.5rem;
-			position: absolute;
-			background: red;
-			display: block;
-			height: 10vw !important;
-			width: 10vw !important;
-			/*display: none;*/
-		}
-		.main_image a>img{
-			height: 1rem;
-			display: block;
-		}
-		/*.main_image  #btn_prev{
-			margin-left: 8vw;
-			left: 10vw;
-		}
-		.main_image  #btn_next{
-			margin-right: 8vw;
-			right: 10vw;
-		}*/
-		.main_image #btn_prev{
-			background:url(../image/hover_left.png) no-repeat left top;
-			background-size:6vw 6vw ;
-			left:5vw;
-			
-		}
-		.main_image #btn_next{
-			background:url(../image/hover_right.png) no-repeat right top;
-			background-size:6vw 6vw ;
-			right:5vw;
-		}
-		</style>
+		</style>-->
 	</head>
 	<body>
 		<header id="wrapper">
@@ -135,10 +101,6 @@
 			                		<img src="images/suolong.jpg" alt=""> 
 			                	</li>
 			                </ul>
-		                	<a href="javascript:;" id="btn_prev">
-		                	</a>
-							<a href="javascript:;" id="btn_next">
-							</a>
 		                </div>
 					</div>
 				</div>
@@ -161,10 +123,31 @@
 					</p>
 				</div>
 			</div>
+			<div class="box-second">
+				<div class="box-second-one">
+					<img src="images/dog1.jpg" alt=""> 
+					<div class="TipOfSecondImg">
+						<p class="firsttip">黑白色的是边牧海盗</p>
+						<p class="secondtip">陨石色的是澳牧navy</p>
+					</div>
+				</div>
+				<div class="box-second-two">
+					<img src="images/pic10.jpg" alt=""> 
+					<p>空白处书写您想写的</p>
+				</div>
+				<div class="box-second-three">
+					<img src="images/pic15.jpg" alt=""> 
+					<div class="TipOfSecondImg">
+						<p class="firsttip">这是一张示例图</p>
+						<p class="secondtip">空白页</p>
+					</div>
+				</div>
+			</div>
 		</div>
-			
+		<script src="js/index.js" type="text/javascript" /></script>
 		<script>
 			$(document).ready(function(){
+				
 				//触动屏幕显示左右组件----PC端
 				$(".Carousel_figur").hover(function(){
 					$("#btn_prev,#btn_next").fadeIn()
