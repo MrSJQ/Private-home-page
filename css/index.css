@@ -59,7 +59,7 @@ body{
 		color: #FFFFFF;
 		cursor: pointer;
 	}
-	.container .box-first, .container .box-second, .container .box-third{
+	.container .box-first, .container .box-second, .container .box-third, .container .box-fourth{
 		width: 960px;
 		height: 20rem;
 		/*overflow: hidden;*/
@@ -110,6 +110,7 @@ body{
 		width: 100%;
 		position: absolute;
 		overflow: hidden;
+		cursor: pointer;
 	}
 	.container .box-first .image-div .Carousel_figur .main_image ul li{
 		float: left;
@@ -148,15 +149,19 @@ body{
 		border: 1px solid black;
 		background-color: white;
 	}
-	.container .box-second, .container .box-third{
+	.container .box-second, .container .box-third, .container .box-fourth{
 		background: #0B0B0B;
 	}
-	.container .box-second div, .container .box-third div, .container .box-third div{
+	.container .box-second div, .container .box-third div, .container .box-fourth div{
 		margin-top: -2rem;
 		width: 30%;
 		height: 100%;
 		float: left;
+		/*cursor: pointer;*/
 		/*background: #F5F5F5;*/
+	}
+	.box-second-one, .box-second-three{
+		cursor: pointer;
 	}
 	.container .box-second .box-second-two, .container .box-third .box-second-two{
 		background: #F5F5F5;
@@ -173,7 +178,7 @@ body{
 		cursor: pointer;display: none;
 	}*/
 	
-	.container .box-second div .TipOfSecondImg, .container .box-third div .TipOfSecondImg{
+	.container .box-second div .TipOfSecondImg, .container .box-third div .TipOfSecondImg, .container .box-fourth .TipOfSecondImg{
 		/*background: #F5F5F5;*/
 		width: 10rem;
 		height: 3rem;
@@ -183,7 +188,7 @@ body{
 		display: block;
 		position: relative;
 	}
-	.container .box-second div .TipOfSecondImg p, .container .box-third div .TipOfSecondImg p{
+	.container .box-second div .TipOfSecondImg p, .container .box-third div .TipOfSecondImg p, .container .box-fourth .box-second-one .TipOfSecondImg p, .container .box-fourth .TipOfSecondImg p{
 		height: 1.5rem;
 		line-height: 1.5rem;
 		text-align: center;
@@ -198,6 +203,53 @@ body{
 		width: 100%;
 		height: 40%;
 	}
+	.container .box-fourth .box-fourth-div{
+		width: 70%;
+		float: right;
+		height: 100%;
+		cursor: pointer;
+	}
+	.container .box-fourth .box-fourth-div img{
+		width: 100%;
+		height: 100%;
+	}
+	.container .box-fourth .box-second-one{
+		width: 30%;
+		float: left;
+		background: #F5F5F5;
+		height: 100%;
+	}
+	.container .box-fourth .box-second-one img{
+		width: 100%;
+		display: block;
+		height: 40%;
+	}
+	
 }
 
 
+footer{
+	width: 100%;
+	height: 18rem;
+	background: #1e1d1d;
+	margin: 0 auto;
+	display: block;
+}
+footer div{
+	display: block;
+	margin: 0 auto;
+	width: 17.5rem;
+	height: 5rem;
+	/*border: 1px solid;*/
+}
+footer div img{
+	cursor: pointer;
+	text-align: center;
+	width: 2rem;
+	height: 2rem;
+	margin: 0.5rem;
+}
+footer p{
+	text-align: center;
+	color: #F5F5F5;
+}
